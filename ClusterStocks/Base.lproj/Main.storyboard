@@ -44,17 +44,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DLC-jh-aOY" userLabel="Watch List Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DLC-jh-aOY" userLabel="Watch List Table View">
                                 <rect key="frame" x="15" y="94" width="345" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StockCell" id="Wpw-jf-lmy">
-                                        <rect key="frame" x="0.0" y="28" width="345" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StockCell" rowHeight="60" id="Wpw-jf-lmy" customClass="StockCell" customModule="ClusterStocks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="345" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wpw-jf-lmy" id="esq-9c-muE">
-                                            <rect key="frame" x="0.0" y="0.0" width="312" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="312" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMZN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-mb-NTB">
+                                                    <rect key="frame" x="16" y="0.0" width="100" height="59.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Glk-Sc-hK6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1277.30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAN-qM-LR1">
+                                                    <rect key="frame" x="236.5" y="0.0" width="59.5" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CAN-qM-LR1" secondAttribute="trailing" constant="16" id="1aA-Z2-MOP"/>
+                                                <constraint firstAttribute="bottom" secondItem="CAN-qM-LR1" secondAttribute="bottom" id="Aot-Y2-KvJ"/>
+                                                <constraint firstItem="B7F-mb-NTB" firstAttribute="top" secondItem="esq-9c-muE" secondAttribute="top" id="EWf-sf-SDA"/>
+                                                <constraint firstItem="CAN-qM-LR1" firstAttribute="top" secondItem="esq-9c-muE" secondAttribute="top" id="GOD-ko-cll"/>
+                                                <constraint firstItem="B7F-mb-NTB" firstAttribute="leading" secondItem="esq-9c-muE" secondAttribute="leading" constant="16" id="Gfd-sU-vAu"/>
+                                                <constraint firstItem="CAN-qM-LR1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B7F-mb-NTB" secondAttribute="trailing" constant="8" symbolic="YES" id="XYg-q7-ldt"/>
+                                                <constraint firstAttribute="bottom" secondItem="B7F-mb-NTB" secondAttribute="bottom" id="bYT-RH-ch9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currentPrice" destination="CAN-qM-LR1" id="mJC-HE-xxS"/>
+                                            <outlet property="ticker" destination="B7F-mb-NTB" id="mJt-DK-4kr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -69,7 +100,13 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Watch List" image="watchlist" id="cPa-gy-q4n"/>
-                    <navigationItem key="navigationItem" title="Watch List" id="xNr-Vh-rB3"/>
+                    <navigationItem key="navigationItem" title="Watch List" id="xNr-Vh-rB3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bV4-HP-hCn">
+                            <connections>
+                                <segue destination="GhS-MM-KwT" kind="show" identifier="SearchStock" id="5nO-ZN-4Cw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="watchListTableView" destination="DLC-jh-aOY" id="GD7-Ww-yTA"/>
                         <segue destination="hjl-GY-Rki" kind="show" identifier="ShowStockSummary" id="B3n-Po-WbO"/>
@@ -79,10 +116,101 @@
             </objects>
             <point key="canvasLocation" x="1660" y="394"/>
         </scene>
-        <!--Stock Scene-->
+        <!--Search -->
+        <scene sceneID="wWk-Jt-zcp">
+            <objects>
+                <viewController title="Search " id="GhS-MM-KwT" customClass="SearchViewController" customModule="ClusterStocks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWY-Ua-AFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter a ticker symbol" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJo-tC-Erc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" smartDashesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GhS-MM-KwT" id="1Gj-DO-ltO"/>
+                                </connections>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-yX-f3Y" userLabel="Value Stack View">
+                                <rect key="frame" x="159" y="220" width="200" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AMZN" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Opc-7A-XKu" userLabel="Ticker Value">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amazon.com, Inc." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NeO-8N-6Fp" userLabel="Company Name Value">
+                                        <rect key="frame" x="0.0" y="45" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1860.06" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-md-bqj" userLabel="Current Price Value">
+                                        <rect key="frame" x="0.0" y="90" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V2r-fC-oYv"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="x8s-RG-2nh" userLabel="Field Stack View">
+                                <rect key="frame" x="16" y="220" width="133" height="111.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-vu-9qc" userLabel="Ticker">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJP-Oi-RJa">
+                                        <rect key="frame" x="0.0" y="45.5" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Current Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejs-JT-Mbm">
+                                        <rect key="frame" x="0.0" y="91" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x8s-RG-2nh" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" constant="16" id="C2i-uN-3b4"/>
+                            <constraint firstItem="bJo-tC-Erc" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" id="DSv-oK-OrK"/>
+                            <constraint firstItem="um7-Aq-EB8" firstAttribute="trailing" secondItem="Dzl-yX-f3Y" secondAttribute="trailing" constant="16" id="EJy-YW-sbm"/>
+                            <constraint firstItem="x8s-RG-2nh" firstAttribute="top" secondItem="bJo-tC-Erc" secondAttribute="bottom" constant="100" id="Njg-oW-oGs"/>
+                            <constraint firstItem="bJo-tC-Erc" firstAttribute="trailing" secondItem="um7-Aq-EB8" secondAttribute="trailing" id="PAv-gy-JeI"/>
+                            <constraint firstItem="Dzl-yX-f3Y" firstAttribute="leading" secondItem="x8s-RG-2nh" secondAttribute="trailing" constant="10" id="Pum-4C-4DT"/>
+                            <constraint firstItem="Dzl-yX-f3Y" firstAttribute="top" secondItem="x8s-RG-2nh" secondAttribute="top" id="qwp-A1-r0Z"/>
+                            <constraint firstItem="bJo-tC-Erc" firstAttribute="top" secondItem="um7-Aq-EB8" secondAttribute="top" id="sHI-kj-tVR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="um7-Aq-EB8"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyNameValue" destination="NeO-8N-6Fp" id="xoO-5S-Uui"/>
+                        <outlet property="currentPriceValue" destination="SQr-md-bqj" id="aYT-Jw-hPA"/>
+                        <outlet property="fieldStackView" destination="x8s-RG-2nh" id="rko-WC-E7E"/>
+                        <outlet property="searchBar" destination="bJo-tC-Erc" id="lWb-Z0-n9O"/>
+                        <outlet property="tickerValue" destination="Opc-7A-XKu" id="815-i9-L5H"/>
+                        <outlet property="valueStackView" destination="Dzl-yX-f3Y" id="cBy-Ct-YFp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3a-zY-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="48"/>
+        </scene>
+        <!--Stock Summary-->
         <scene sceneID="YNc-1L-Zbv">
             <objects>
-                <viewController id="hjl-GY-Rki" userLabel="Stock Scene" customClass="StockViewController" customModule="ClusterStocks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Stock Summary" id="hjl-GY-Rki" userLabel="Stock Summary" customClass="StockSummaryViewController" customModule="ClusterStocks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oYU-ka-TOl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,10 +349,22 @@
                         <viewLayoutGuide key="safeArea" id="ku6-GL-Bmu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stock Summary" id="3zl-jR-ugu"/>
+                    <connections>
+                        <outlet property="companyNameValue" destination="G2Q-YB-8w3" id="noy-Qw-kqa"/>
+                        <outlet property="currentPriceValue" destination="EVf-gc-4Ev" id="c4p-zn-yzl"/>
+                        <outlet property="daysRangeValue" destination="kpc-gf-CaL" id="geu-rw-qGR"/>
+                        <outlet property="earningsDateValue" destination="QbA-S0-wrN" id="FMV-ZK-SX3"/>
+                        <outlet property="lastUpdatedValue" destination="fvc-Cq-9Cc" id="nki-NX-7Hj"/>
+                        <outlet property="openValue" destination="uf0-B8-Oop" id="wZ9-IS-ja8"/>
+                        <outlet property="previousCloseValue" destination="yOb-9v-B1m" id="zig-u1-oGn"/>
+                        <outlet property="t" destination="VpV-00-PtN" id="h2y-Om-DUR"/>
+                        <outlet property="tickerValue" destination="sXF-Vl-l4C" id="a4p-Qd-Qnv"/>
+                        <outlet property="yearRangeValue" destination="Bfz-53-YIM" id="xtI-JP-aYe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a8-Ll-HqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542" y="394"/>
+            <point key="canvasLocation" x="2737" y="733"/>
         </scene>
         <!--Watch List Navigation-->
         <scene sceneID="Dw1-9f-FZF">

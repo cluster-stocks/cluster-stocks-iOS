@@ -14,7 +14,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var watchListTableView: UITableView!
     
     var allStocks: [StockSummary] {
-        return StockSummaryUtils.instance().findAll()
+        return RealmUtils.instance().findAll()
     }
 
     override func viewDidLoad() {
@@ -54,14 +54,14 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
             stock1.companyName="Amzon Company"
             stock1.currentPrice = 1078.987
             stock1.previousClosePrice = 1079.87
-            StockSummaryUtils.instance().saveStockSummary(stock: stock1)
+            RealmUtils.instance().saveStockSummary(stock: stock1)
         
             let stock2 = StockSummary()
             stock2.ticker="MSFT"
             stock2.companyName="Microsoft  Corporation"
             stock2.currentPrice = 578.987
             stock2.previousClosePrice = 479.87
-            StockSummaryUtils.instance().saveStockSummary(stock: stock2)
+            RealmUtils.instance().saveStockSummary(stock: stock2)
     }
     
     

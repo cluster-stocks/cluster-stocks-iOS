@@ -22,6 +22,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate
         self.searchBar.delegate = self
         fieldStackView.isHidden = true
         valueStackView.isHidden = true
+        
     }
     
     
@@ -29,7 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate
         
         print("Searching...\(String(describing: searchBar.text))")
         
-        if let searchText = searchBar.text, let stock = StockSummaryUtils.instance().findAll().first(where: { $0.ticker == searchText
+        if let searchText = searchBar.text, let stock = RealmUtils.instance().findAll().first(where: { $0.ticker == searchText
         }) {
             tickerValue.text = stock.ticker
             companyNameValue.text = stock.companyName

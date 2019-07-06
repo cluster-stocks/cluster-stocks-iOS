@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
+public class CSClusterStockAPIClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "CLUSTERSTOCKSClusterStocksClient"
+	static let AWSInfoClientKey = "CSClusterStockAPIClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:CLUSTERSTOCKSClusterStocksClient = {
+	private static let _defaultClient:CSClusterStockAPIClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return CLUSTERSTOCKSClusterStocksClient(configuration: serviceConfiguration!)
+        return CSClusterStockAPIClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = CLUSTERSTOCKSClusterStocksClient.default()
+	     let serviceClient = CSClusterStockAPIClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `CLUSTERSTOCKSClusterStocksClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `CSClusterStockAPIClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> CLUSTERSTOCKSClusterStocksClient{
+	public class func `default`() -> CSClusterStockAPIClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         CLUSTERSTOCKSClusterStocksClient.registerClient(withConfiguration: configuration, forKey: "USWest2CLUSTERSTOCKSClusterStocksClient")
+	         CSClusterStockAPIClient.registerClient(withConfiguration: configuration, forKey: "USWest2CSClusterStockAPIClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = CLUSTERSTOCKSClusterStocksClient.client(forKey: "USWest2CLUSTERSTOCKSClusterStocksClient")
+	     let serviceClient = CSClusterStockAPIClient.client(forKey: "USWest2CSClusterStockAPIClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(CLUSTERSTOCKSClusterStocksClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(CSClusterStockAPIClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         CLUSTERSTOCKSClusterStocksClient.registerClient(withConfiguration: configuration, forKey: "USWest2CLUSTERSTOCKSClusterStocksClient")
+	         CSClusterStockAPIClient.registerClient(withConfiguration: configuration, forKey: "USWest2CSClusterStockAPIClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = CLUSTERSTOCKSClusterStocksClient.client(forKey: "USWest2CLUSTERSTOCKSClusterStocksClient")
+	 	let serviceClient = CSClusterStockAPIClient.client(forKey: "USWest2CSClusterStockAPIClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> CLUSTERSTOCKSClusterStocksClient {
+	public class func client(forKey key: String) -> CSClusterStockAPIClient {
 		objc_sync_enter(self)
-		if let client: CLUSTERSTOCKSClusterStocksClient = _serviceClients.object(forKey: key) as? CLUSTERSTOCKSClusterStocksClient {
+		if let client: CSClusterStockAPIClient = _serviceClients.object(forKey: key) as? CSClusterStockAPIClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			CLUSTERSTOCKSClusterStocksClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			CSClusterStockAPIClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! CLUSTERSTOCKSClusterStocksClient;
+		return _serviceClients.object(forKey: key) as! CSClusterStockAPIClient;
 	}
 
 	/**
@@ -141,11 +141,11 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
 	    super.init()
 	
 	    self.configuration = configuration.copy() as! AWSServiceConfiguration
-	    var URLString: String = "https://8huni4uzoi.execute-api.us-east-1.amazonaws.com/dev"
+	    var URLString: String = "https://nye3pj4ot5.execute-api.us-east-1.amazonaws.com/production"
 	    if URLString.hasSuffix("/") {
 	        URLString = URLString.substring(to: URLString.index(before: URLString.endIndex))
 	    }
-        self.configuration.endpoint = AWSEndpoint(region: configuration.regionType, service: .APIGateway, url: URL(string: URLString))
+	    self.configuration.endpoint = AWSEndpoint(region: configuration.regionType, service: .APIGateway, url: URL(string: URLString))
 	    let signer: AWSSignatureV4Signer = AWSSignatureV4Signer(credentialsProvider: configuration.credentialsProvider, endpoint: self.configuration.endpoint)
 	    if let endpoint = self.configuration.endpoint {
 	    	self.configuration.baseURL = endpoint.url
@@ -157,24 +157,86 @@ public class CLUSTERSTOCKSClusterStocksClient: AWSAPIGatewayClient {
     /*
      
      
-     @param ticker 
-     @param accept 
      
      return type: Empty
      */
-    public func stockGet(ticker: String, accept: String) -> AWSTask<Empty> {
+    public func stockGet() -> AWSTask<Empty> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
-                   "Accept": accept
+                   
 	            ]
 	    
-	    var queryParameters:[String:Any] = [:]
-	    queryParameters["ticker"] = ticker
+	    let queryParameters:[String:Any] = [:]
 	    
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("GET", urlString: "/stock", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
+	}
+
+	
+    /*
+     
+     
+     
+     return type: Empty
+     */
+    public func stockPost() -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/stock", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
+	}
+
+	
+    /*
+     
+     
+     @param userName 
+     
+     return type: CSUserGetResultMethodModel
+     */
+    public func userGet(userName: String) -> AWSTask<CSUserGetResultMethodModel> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    var queryParameters:[String:Any] = [:]
+	    queryParameters["UserName"] = userName
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/user", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CSUserGetResultMethodModel.self) as! AWSTask<CSUserGetResultMethodModel>
+	}
+
+	
+    /*
+     
+     
+     
+     return type: Empty
+     */
+    public func userPost() -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/user", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 

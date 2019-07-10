@@ -12,6 +12,7 @@ import RealmSwift
 class WatchListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var watchListTableView: UITableView!
+    let client = CSClusterStockAPIClient.default()
     
     var allStocks: [StockSummary] {
         return RealmUtils.instance().findAll()
@@ -46,22 +47,59 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
          let stock = allStocks[indexPath.row]
          self.performSegue(withIdentifier: "ShowStockSummary", sender: stock)
     }
+    
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 
+    //internal parameter - forRowAt and indexpath are alias
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let stock = self.allStocks[indexPath.row]
+            if let userPutRequestInput = CSUserPutRequestMethodModel() {
+                userPutRequestInput.ticker = [stock.ticker]
+                userPutRequestInput.userName = "a"//fetch username
+                userPutRequestInput.operation = "-"
+                UpdateWatchlist(input: userPutRequestInput, stock:stock)
+                RealmUtils.instance().deleteStockSummary(stock: stock)
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            }
+        }
+    }
+    
+    func UpdateWatchlist(input:CSUserPutRequestMethodModel, stock:StockSummary) {
+        client.userPut(body: input).continueWith { (task: AWSTask<CSUserPutResponseMethodModel>?) -> AnyObject? in
+            if let result = self.putUserResult(task: task) {
+                DispatchQueue.main.async {
+                    let user = User()
+                    user.userName = "a"
+                    if let watchedStocks = result.watchlist{
+                    user.watchList.append(objectsIn: watchedStocks)
+                    }
+                    RealmUtils.instance().saveUser(user: user)
+                    RealmUtils.instance().deleteStockSummary(stock: stock)
+                }
+                return result
+            }
+            return nil
+        }        
+    }
+    
+    func putUserResult(task: AWSTask<CSUserPutResponseMethodModel>?) -> CSUserPutResponseMethodModel? {
+        if let error = task?.error {
+            print("Error occurred: \(error)")
+            return nil
+        } else if let result = task?.result {
+            return result
+        }
+        else {
+            return nil
+        }
+    }
 
     public func populateStockSummaryList() {
-            let stock1 = StockSummary()
-            stock1.ticker="AMZN"
-            stock1.companyName="Amzon Company"
-            stock1.currentPrice = 1078.987
-            stock1.previousClosePrice = 1079.87
-            RealmUtils.instance().saveStockSummary(stock: stock1)
-        
-            let stock2 = StockSummary()
-            stock2.ticker="MSFT"
-            stock2.companyName="Microsoft  Corporation"
-            stock2.currentPrice = 578.987
-            stock2.previousClosePrice = 479.87
-            RealmUtils.instance().saveStockSummary(stock: stock2)
+        // Get all the stock summaries
     }
     
     

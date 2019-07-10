@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     }
     
     func display() {
-        if let user = RealmUtils.instance().getUser() {
+        if let user = RealmUtils.instance().getCurrentUser() {
           userName.text = user.userName
           fullName.text = user.fullName
         }

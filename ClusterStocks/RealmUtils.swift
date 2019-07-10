@@ -34,11 +34,37 @@ class RealmUtils {
         return results.map({$0})
     }
     
+    public func deleteStockSummary(stock: StockSummary)
+    {
+        try! realm.write {
+            realm.delete(stock)
+        }
+    }
+    
+    func deleteAllStockSummaries() {
+        for stock:StockSummary in RealmUtils.instance().findAll() {
+            RealmUtils.instance().deleteStockSummary(stock: stock)
+        }
+    }
+    
     public func saveUser(user: User)
     {
         try! realm.write {
             realm.add(user, update: true)
         }
+    }
+    
+    
+    public func getCurrentUser() -> User? // Optional<User>
+    {
+        let result = realm.objects(User.self)
+        return result.map({$0}).first
+    }
+    
+    public func findAll() -> [User]
+    {
+        let results = realm.objects(User.self)
+        return results.map({$0})
     }
     
     public func deleteUser(user: User)
@@ -47,11 +73,11 @@ class RealmUtils {
             realm.delete(user)
         }
     }
-    
-    public func getUser() -> User? // Optional<User>
-    {
-        let result = realm.objects(User.self)
-        return result.map({$0}).first
+
+    public func deleteAllUsers() {
+        for user:User in RealmUtils.instance().findAll() {
+            RealmUtils.instance().deleteUser(user: user)
+        }
     }
 }
 

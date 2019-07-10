@@ -19,17 +19,27 @@ import AWSCore
 
 
 @objcMembers
-public class CSUserPostRequestMethodModel : AWSModel {
+public class CSStockGetResponseMethodModel : AWSModel {
     
-    var userName: String?
-    var fullName: String?
-    var ticker: [String]?
+    var currentPrice: String?
+    var previousClose: String?
+    var open: String?
+    var daysRange: String?
+    var week52Range: String?
+    var earningsDate: String?
+    var nameOfTheListing: String?
+    var updatedDateTime: String?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
-		params["userName"] = "UserName"
-		params["fullName"] = "FullName"
-		params["ticker"] = "Ticker"
+		params["currentPrice"] = "CurrentPrice"
+		params["previousClose"] = "PreviousClose"
+		params["open"] = "Open"
+		params["daysRange"] = "DaysRange"
+		params["week52Range"] = "Week52Range"
+		params["earningsDate"] = "EarningsDate"
+		params["nameOfTheListing"] = "NameOfTheListing"
+		params["updatedDateTime"] = "UpdatedDateTime"
 		
         return params
 	}

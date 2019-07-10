@@ -496,7 +496,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="Izj-Ds-lGq" eventType="touchUpInside" id="m4A-UC-iTG"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="8HD-1G-1Nf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -507,6 +506,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bEi-2e-3Ix"/>
                     </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="showAppTab" id="3Aa-TZ-t6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgE-NC-1SG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

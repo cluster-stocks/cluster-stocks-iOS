@@ -19,17 +19,17 @@ import AWSCore
 
 
 @objcMembers
-public class CSUserPostRequestMethodModel : AWSModel {
+public class CSStockPostResponseMethodModel : AWSModel {
     
+    var responseMessage: String?
     var userName: String?
-    var fullName: String?
-    var ticker: [String]?
+    var watchlist: [String]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
+		params["responseMessage"] = "ResponseMessage"
 		params["userName"] = "UserName"
-		params["fullName"] = "FullName"
-		params["ticker"] = "Ticker"
+		params["watchlist"] = "Watchlist"
 		
         return params
 	}

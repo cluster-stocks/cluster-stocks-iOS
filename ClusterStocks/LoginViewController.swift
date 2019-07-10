@@ -14,7 +14,9 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserDetails()
+        //Use when logging out
+        RealmUtils.instance().deleteAllUsers()
+        RealmUtils.instance().deleteAllStockSummaries()
     }
     
     
@@ -30,11 +32,12 @@ class LoginViewController: UIViewController {
     
     //After Login in
     func getUserDetails(){
-        client.userGet(userName: "sampleUserName").continueWith { (task: AWSTask<CSUserGetResponseMethodModel>?) -> AnyObject? in
+        client.userGet(userName: "nadya").continueWith { (task: AWSTask<CSUserGetResponseMethodModel>?) -> AnyObject? in
             if let result = self.getUserGetResult(task: task) {
                 //After doing AWSTask in background dispatch queue, using main dispatch queue for accessing Realm DB.
                 DispatchQueue.main.async {
                     self.createUserObject(userDetails: result)
+                    self.performSegue(withIdentifier: "showAppTab", sender: self)
                 }
                 return result
             }
@@ -64,17 +67,16 @@ class LoginViewController: UIViewController {
         if let fullName = userDetails.fullName {
             user.fullName = fullName
         }
-        if let interestedStocks = userDetails.watchlist {
+        if let interestedStocks = userDetails.watchList {
             user.watchList.append(objectsIn: interestedStocks)
         }
         RealmUtils.instance().saveUser(user: user)
     }
     
     //On logout
-    func deleteUserObject() {
-        if let user = RealmUtils.instance().getUser(){
-            RealmUtils.instance().deleteUser(user: user)
-        }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return RealmUtils.instance().getCurrentUser() != nil
     }
 }
 

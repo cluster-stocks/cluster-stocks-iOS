@@ -24,14 +24,12 @@ public class CSUserPostResponseMethodModel : AWSModel {
     var responseMessage: String?
     var userName: String?
     var fullName: String?
-    var watchList: [String]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["responseMessage"] = "ResponseMessage"
 		params["userName"] = "UserName"
 		params["fullName"] = "FullName"
-		params["watchList"] = "WatchList"
 		
         return params
 	}

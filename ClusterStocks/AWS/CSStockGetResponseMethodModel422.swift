@@ -19,17 +19,15 @@ import AWSCore
 
 
 @objcMembers
-public class CSUserPutResponseMethodModel : AWSModel {
+public class CSStockGetResponseMethodModel422 : AWSModel {
     
     var responseMessage: String?
-    var watchlist: [String]?
-    var notValidTickers: [String]?
+    var notValidTicker: String?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["responseMessage"] = "ResponseMessage"
-		params["watchlist"] = "Watchlist"
-		params["notValidTickers"] = "NotValidTickers"
+		params["notValidTicker"] = "NotValidTicker"
 		
         return params
 	}

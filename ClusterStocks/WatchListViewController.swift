@@ -26,6 +26,72 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
         populateStockSummaryList()
     }
     
+    // Get all the stock summaries, store in realm and populate the watchlist UI
+    func populateStockSummaryList() {
+        if let user = RealmUtils.instance().getCurrentUser() {
+            for ticker in user.watchList {
+                getStock(ticker: ticker)
+            }
+        }
+        
+    }
+    func getStock(ticker: String){
+        client.stockGet(ticker: ticker).continueWith {(task: AWSTask<CSStockGetResponseMethodModel>?) -> AnyObject? in
+            if let result = self.getStockGetResult(task: task) {
+                //After doing AWSTask in background dispatch queue, using main dispatch queue for accessing Realm DB.
+                DispatchQueue.main.async {
+                    self.createStockSummaryObject(stockDetails: result)
+                    self.watchListTableView.reloadData()
+                }
+                return result
+            }
+            return nil
+        }
+    }
+    
+    func getStockGetResult(task: AWSTask<CSStockGetResponseMethodModel>?) -> CSStockGetResponseMethodModel? {
+        if let error = task?.error {
+            print("Error occurred: \(error)")
+            return nil
+        } else if let result = task?.result {
+            return result
+        }
+        else {
+            return nil
+        }
+    }
+    func createStockSummaryObject(stockDetails: CSStockGetResponseMethodModel) {
+        let stock = StockSummary()
+        if let stockTicker = stockDetails.ticker {
+            stock.ticker = stockTicker
+        }
+        if let stockCP = stockDetails.currentPrice {
+            stock.currentPrice = stockCP
+        }
+        if let stockPCP = stockDetails.previousClose {
+            stock.previousClosePrice = stockPCP
+        }
+        if let name = stockDetails.nameOfTheListing {
+            stock.companyName = name
+        }
+        if let week52Range = stockDetails.week52Range {
+            stock.yearRange = week52Range
+        }
+        if let dayRange = stockDetails.daysRange {
+            stock.daysRange = dayRange
+        }
+        if let open = stockDetails.open {
+            stock.openPrice = open
+        }
+        if let updateTime = stockDetails.updatedDateTime {
+            stock.lastUpdated = updateTime
+        }
+        //  if let earningsDate = stockDetails.earningsDate {
+        //   stock.earningsDate = earningsDate
+        //}
+        RealmUtils.instance().saveStockSummary(stock: stock)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allStocks.count
     }
@@ -98,11 +164,6 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
 
-    public func populateStockSummaryList() {
-        // Get all the stock summaries
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let stock = sender as? StockSummary {
             if let stockVC = segue.destination as? StockSummaryViewController {

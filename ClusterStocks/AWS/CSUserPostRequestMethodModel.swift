@@ -23,13 +23,11 @@ public class CSUserPostRequestMethodModel : AWSModel {
     
     var userName: String?
     var fullName: String?
-    var ticker: [String]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["userName"] = "UserName"
 		params["fullName"] = "FullName"
-		params["ticker"] = "Ticker"
 		
         return params
 	}

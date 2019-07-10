@@ -22,24 +22,28 @@ import AWSCore
 public class CSStockGetResponseMethodModel : AWSModel {
     
     var currentPrice: String?
-    var previousClose: String?
-    var open: String?
     var daysRange: String?
-    var week52Range: String?
     var earningsDate: String?
     var nameOfTheListing: String?
+    var open: String?
+    var previousClose: String?
+    var URL: String?
     var updatedDateTime: String?
+    var week52Range: String?
+    var ticker: String?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["currentPrice"] = "CurrentPrice"
-		params["previousClose"] = "PreviousClose"
-		params["open"] = "Open"
 		params["daysRange"] = "DaysRange"
-		params["week52Range"] = "Week52Range"
-		params["earningsDate"] = "EarningsDate"
+		//params["earningsDate"] = "EarningsDate"
 		params["nameOfTheListing"] = "NameOfTheListing"
+		params["open"] = "Open"
+		params["previousClose"] = "PreviousClose"
+		params["URL"] = "URL"
 		params["updatedDateTime"] = "UpdatedDateTime"
+		params["week52Range"] = "Week52Range"
+        params["ticker"] = "Ticker"
 		
         return params
 	}

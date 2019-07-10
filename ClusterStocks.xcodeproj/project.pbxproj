@@ -11,6 +11,19 @@
 		776B7DB922AF740800C525A9 /* StockSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B7DB822AF740800C525A9 /* StockSummaryViewController.swift */; };
 		7785C8B7229E079F00D21E67 /* StockSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7785C8B6229E079F00D21E67 /* StockSummary.swift */; };
 		7785C8BB229E093A00D21E67 /* RealmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7785C8BA229E093A00D21E67 /* RealmUtils.swift */; };
+		7793683A22D5CA9600652A42 /* CSStockPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793682D22D5CA9400652A42 /* CSStockPostResponseMethodModel.swift */; };
+		7793683B22D5CA9600652A42 /* CSUserPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793682E22D5CA9400652A42 /* CSUserPostResponseMethodModel.swift */; };
+		7793683C22D5CA9600652A42 /* CSUserPostResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793682F22D5CA9400652A42 /* CSUserPostResponseMethodModel422.swift */; };
+		7793683D22D5CA9600652A42 /* CSStockGetResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683022D5CA9400652A42 /* CSStockGetResponseMethodModel422.swift */; };
+		7793683F22D5CA9600652A42 /* CSUserGetResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683222D5CA9500652A42 /* CSUserGetResponseMethodModel422.swift */; };
+		7793684022D5CA9600652A42 /* CSClusterStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683322D5CA9500652A42 /* CSClusterStockAPIClient.swift */; };
+		7793684122D5CA9600652A42 /* CSUserPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683422D5CA9500652A42 /* CSUserPostRequestMethodModel.swift */; };
+		7793684222D5CA9600652A42 /* CSUserPutResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683522D5CA9500652A42 /* CSUserPutResponseMethodModel.swift */; };
+		7793684322D5CA9600652A42 /* CSUserPutResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683622D5CA9500652A42 /* CSUserPutResponseMethodModel422.swift */; };
+		7793684422D5CA9600652A42 /* CSUserPutRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683722D5CA9500652A42 /* CSUserPutRequestMethodModel.swift */; };
+		7793684522D5CA9600652A42 /* CSStockPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683822D5CA9500652A42 /* CSStockPostRequestMethodModel.swift */; };
+		7793684622D5CA9600652A42 /* CSUserGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793683922D5CA9500652A42 /* CSUserGetResponseMethodModel.swift */; };
+		7793684822D5DA7E00652A42 /* CSStockGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793684722D5DA7E00652A42 /* CSStockGetResponseMethodModel.swift */; };
 		77B0FCEF22C9CFDB00963B69 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0FCEE22C9CFDB00963B69 /* StockCell.swift */; };
 		77BF645A229CA4C4007C8D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF6459229CA4C4007C8D8B /* AppDelegate.swift */; };
 		77BF645C229CA4C4007C8D8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF645B229CA4C4007C8D8B /* ProfileViewController.swift */; };
@@ -22,15 +35,6 @@
 		77BF647C229CA4C8007C8D8B /* ClusterStocksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF647B229CA4C8007C8D8B /* ClusterStocksUITests.swift */; };
 		77BF64B1229CCCC8007C8D8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF64B0229CCCC8007C8D8B /* LoginViewController.swift */; };
 		77C5953A22C5DCF500928968 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C5953922C5DCF500928968 /* SearchViewController.swift */; };
-		77D0D5D322D1C82600E077CA /* CSStockGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5CC22D1C82400E077CA /* CSStockGetResponseMethodModel.swift */; };
-		77D0D5D422D1C82600E077CA /* CSUserPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5CD22D1C82500E077CA /* CSUserPostResponseMethodModel.swift */; };
-		77D0D5D522D1C82600E077CA /* CSUserPutResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5CE22D1C82500E077CA /* CSUserPutResponseMethodModel.swift */; };
-		77D0D5D622D1C82600E077CA /* CSStockPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5CF22D1C82500E077CA /* CSStockPostRequestMethodModel.swift */; };
-		77D0D5D722D1C82600E077CA /* CSStockPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5D022D1C82500E077CA /* CSStockPostResponseMethodModel.swift */; };
-		77D0D5D822D1C82600E077CA /* CSUserPutRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5D122D1C82500E077CA /* CSUserPutRequestMethodModel.swift */; };
-		77D0D5D922D1C82600E077CA /* CSUserPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5D222D1C82500E077CA /* CSUserPostRequestMethodModel.swift */; };
-		77D0D5DB22D1C86D00E077CA /* CSClusterStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5DA22D1C86D00E077CA /* CSClusterStockAPIClient.swift */; };
-		77D0D5DD22D1CB5100E077CA /* CSUserGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0D5DC22D1CB5100E077CA /* CSUserGetResponseMethodModel.swift */; };
 		77F0259622CEE7A500F234C3 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0259522CEE7A500F234C3 /* ChangePasswordViewController.swift */; };
 		77F0259822CF00AB00F234C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0259722CF00AB00F234C3 /* User.swift */; };
 		ADABA83243972EEE734B221C /* Pods_ClusterStocksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59EC84740B9895C2FA456FA /* Pods_ClusterStocksUITests.framework */; };
@@ -66,6 +70,19 @@
 		776B7DB822AF740800C525A9 /* StockSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockSummaryViewController.swift; sourceTree = "<group>"; };
 		7785C8B6229E079F00D21E67 /* StockSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSummary.swift; sourceTree = "<group>"; };
 		7785C8BA229E093A00D21E67 /* RealmUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtils.swift; sourceTree = "<group>"; };
+		7793682D22D5CA9400652A42 /* CSStockPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockPostResponseMethodModel.swift; sourceTree = "<group>"; };
+		7793682E22D5CA9400652A42 /* CSUserPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostResponseMethodModel.swift; sourceTree = "<group>"; };
+		7793682F22D5CA9400652A42 /* CSUserPostResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostResponseMethodModel422.swift; sourceTree = "<group>"; };
+		7793683022D5CA9400652A42 /* CSStockGetResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockGetResponseMethodModel422.swift; sourceTree = "<group>"; };
+		7793683222D5CA9500652A42 /* CSUserGetResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserGetResponseMethodModel422.swift; sourceTree = "<group>"; };
+		7793683322D5CA9500652A42 /* CSClusterStockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSClusterStockAPIClient.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src 12AM/CSClusterStockAPIClient.swift"; sourceTree = "<group>"; };
+		7793683422D5CA9500652A42 /* CSUserPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostRequestMethodModel.swift; sourceTree = "<group>"; };
+		7793683522D5CA9500652A42 /* CSUserPutResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPutResponseMethodModel.swift; sourceTree = "<group>"; };
+		7793683622D5CA9500652A42 /* CSUserPutResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPutResponseMethodModel422.swift; sourceTree = "<group>"; };
+		7793683722D5CA9500652A42 /* CSUserPutRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPutRequestMethodModel.swift; sourceTree = "<group>"; };
+		7793683822D5CA9500652A42 /* CSStockPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockPostRequestMethodModel.swift; sourceTree = "<group>"; };
+		7793683922D5CA9500652A42 /* CSUserGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSUserGetResponseMethodModel.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src 12AM/CSUserGetResponseMethodModel.swift"; sourceTree = "<group>"; };
+		7793684722D5DA7E00652A42 /* CSStockGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockGetResponseMethodModel.swift; sourceTree = "<group>"; };
 		77B0FCEE22C9CFDB00963B69 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		77BF6456229CA4C4007C8D8B /* ClusterStocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClusterStocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BF6459229CA4C4007C8D8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,15 +100,6 @@
 		77BF647D229CA4C8007C8D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77BF64B0229CCCC8007C8D8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77C5953922C5DCF500928968 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		77D0D5CC22D1C82400E077CA /* CSStockGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockGetResponseMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5CD22D1C82500E077CA /* CSUserPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostResponseMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5CE22D1C82500E077CA /* CSUserPutResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPutResponseMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5CF22D1C82500E077CA /* CSStockPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockPostRequestMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5D022D1C82500E077CA /* CSStockPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockPostResponseMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5D122D1C82500E077CA /* CSUserPutRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPutRequestMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5D222D1C82500E077CA /* CSUserPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostRequestMethodModel.swift; sourceTree = "<group>"; };
-		77D0D5DA22D1C86D00E077CA /* CSClusterStockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSClusterStockAPIClient.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src/CSClusterStockAPIClient.swift"; sourceTree = "<group>"; };
-		77D0D5DC22D1CB5100E077CA /* CSUserGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSUserGetResponseMethodModel.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src/CSUserGetResponseMethodModel.swift"; sourceTree = "<group>"; };
 		77F0259522CEE7A500F234C3 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		77F0259722CF00AB00F234C3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3E6BA12FD001313A8DD3EDE /* Pods-ClusterStocksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClusterStocksUITests.release.xcconfig"; path = "Target Support Files/Pods-ClusterStocksUITests/Pods-ClusterStocksUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,15 +138,19 @@
 		77B0FCF022C9D8B900963B69 /* AWS */ = {
 			isa = PBXGroup;
 			children = (
-				77D0D5DC22D1CB5100E077CA /* CSUserGetResponseMethodModel.swift */,
-				77D0D5DA22D1C86D00E077CA /* CSClusterStockAPIClient.swift */,
-				77D0D5CC22D1C82400E077CA /* CSStockGetResponseMethodModel.swift */,
-				77D0D5CF22D1C82500E077CA /* CSStockPostRequestMethodModel.swift */,
-				77D0D5D022D1C82500E077CA /* CSStockPostResponseMethodModel.swift */,
-				77D0D5D222D1C82500E077CA /* CSUserPostRequestMethodModel.swift */,
-				77D0D5CD22D1C82500E077CA /* CSUserPostResponseMethodModel.swift */,
-				77D0D5D122D1C82500E077CA /* CSUserPutRequestMethodModel.swift */,
-				77D0D5CE22D1C82500E077CA /* CSUserPutResponseMethodModel.swift */,
+				7793684722D5DA7E00652A42 /* CSStockGetResponseMethodModel.swift */,
+				7793683322D5CA9500652A42 /* CSClusterStockAPIClient.swift */,
+				7793683022D5CA9400652A42 /* CSStockGetResponseMethodModel422.swift */,
+				7793683822D5CA9500652A42 /* CSStockPostRequestMethodModel.swift */,
+				7793682D22D5CA9400652A42 /* CSStockPostResponseMethodModel.swift */,
+				7793683922D5CA9500652A42 /* CSUserGetResponseMethodModel.swift */,
+				7793683222D5CA9500652A42 /* CSUserGetResponseMethodModel422.swift */,
+				7793683422D5CA9500652A42 /* CSUserPostRequestMethodModel.swift */,
+				7793682E22D5CA9400652A42 /* CSUserPostResponseMethodModel.swift */,
+				7793682F22D5CA9400652A42 /* CSUserPostResponseMethodModel422.swift */,
+				7793683722D5CA9500652A42 /* CSUserPutRequestMethodModel.swift */,
+				7793683522D5CA9500652A42 /* CSUserPutResponseMethodModel.swift */,
+				7793683622D5CA9500652A42 /* CSUserPutResponseMethodModel422.swift */,
 				7723A22A22AF3352003D2F9A /* AWSApiGatewayBridge.h */,
 			);
 			path = AWS;
@@ -461,26 +473,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77D0D5D722D1C82600E077CA /* CSStockPostResponseMethodModel.swift in Sources */,
+				7793683A22D5CA9600652A42 /* CSStockPostResponseMethodModel.swift in Sources */,
+				7793684822D5DA7E00652A42 /* CSStockGetResponseMethodModel.swift in Sources */,
+				7793683F22D5CA9600652A42 /* CSUserGetResponseMethodModel422.swift in Sources */,
 				77C5953A22C5DCF500928968 /* SearchViewController.swift in Sources */,
-				77D0D5D622D1C82600E077CA /* CSStockPostRequestMethodModel.swift in Sources */,
 				77BF64B1229CCCC8007C8D8B /* LoginViewController.swift in Sources */,
-				77D0D5D522D1C82600E077CA /* CSUserPutResponseMethodModel.swift in Sources */,
-				77D0D5DB22D1C86D00E077CA /* CSClusterStockAPIClient.swift in Sources */,
-				77D0D5D922D1C82600E077CA /* CSUserPostRequestMethodModel.swift in Sources */,
+				7793684122D5CA9600652A42 /* CSUserPostRequestMethodModel.swift in Sources */,
 				776B7DB922AF740800C525A9 /* StockSummaryViewController.swift in Sources */,
+				7793684322D5CA9600652A42 /* CSUserPutResponseMethodModel422.swift in Sources */,
 				77F0259622CEE7A500F234C3 /* ChangePasswordViewController.swift in Sources */,
+				7793683B22D5CA9600652A42 /* CSUserPostResponseMethodModel.swift in Sources */,
 				77BF645E229CA4C4007C8D8B /* WatchListViewController.swift in Sources */,
 				77B0FCEF22C9CFDB00963B69 /* StockCell.swift in Sources */,
 				7785C8B7229E079F00D21E67 /* StockSummary.swift in Sources */,
+				7793684222D5CA9600652A42 /* CSUserPutResponseMethodModel.swift in Sources */,
 				7785C8BB229E093A00D21E67 /* RealmUtils.swift in Sources */,
-				77D0D5D322D1C82600E077CA /* CSStockGetResponseMethodModel.swift in Sources */,
-				77D0D5D422D1C82600E077CA /* CSUserPostResponseMethodModel.swift in Sources */,
-				77D0D5DD22D1CB5100E077CA /* CSUserGetResponseMethodModel.swift in Sources */,
+				7793684622D5CA9600652A42 /* CSUserGetResponseMethodModel.swift in Sources */,
 				77BF645A229CA4C4007C8D8B /* AppDelegate.swift in Sources */,
+				7793684522D5CA9600652A42 /* CSStockPostRequestMethodModel.swift in Sources */,
 				77BF645C229CA4C4007C8D8B /* ProfileViewController.swift in Sources */,
 				77F0259822CF00AB00F234C3 /* User.swift in Sources */,
-				77D0D5D822D1C82600E077CA /* CSUserPutRequestMethodModel.swift in Sources */,
+				7793683C22D5CA9600652A42 /* CSUserPostResponseMethodModel422.swift in Sources */,
+				7793684422D5CA9600652A42 /* CSUserPutRequestMethodModel.swift in Sources */,
+				7793683D22D5CA9600652A42 /* CSStockGetResponseMethodModel422.swift in Sources */,
+				7793684022D5CA9600652A42 /* CSClusterStockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

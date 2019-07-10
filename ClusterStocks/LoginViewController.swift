@@ -73,8 +73,6 @@ class LoginViewController: UIViewController {
         RealmUtils.instance().saveUser(user: user)
     }
     
-    //On logout
-    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return RealmUtils.instance().getCurrentUser() != nil
     }

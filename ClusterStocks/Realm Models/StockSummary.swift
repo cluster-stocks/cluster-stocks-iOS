@@ -11,9 +11,9 @@ class StockSummary : Object {
     
     @objc dynamic var ticker = UUID().uuidString
     @objc dynamic var companyName = ""
-    @objc dynamic var currentPrice = 0.0
-    @objc dynamic var previousClosePrice = 0.0
-    @objc dynamic var openPrice = 0.0
+    @objc dynamic var currentPrice = ""
+    @objc dynamic var previousClosePrice = ""
+    @objc dynamic var openPrice = ""
     @objc dynamic var daysRange = ""
     @objc dynamic var yearRange = ""
     @objc dynamic var earningsDate = ""

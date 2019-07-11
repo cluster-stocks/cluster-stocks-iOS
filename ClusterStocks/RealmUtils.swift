@@ -54,6 +54,24 @@ class RealmUtils {
         }
     }
     
+    public func updateUserWatchlist(username: String, watchedStocks:[String]?)
+    {
+        //Checks if null - safety checks
+        guard let user = RealmUtils.instance().getCurrentUser() else {
+            return
+        }
+        //Get the current user object and modify the watchlist of the object. Do not create new user object and new watchlist list object.
+        if let currentStocks = watchedStocks, !currentStocks.isEmpty {
+            try! realm.write {
+                user.watchList.removeAll()
+                user.watchList.append(objectsIn: currentStocks)
+            }
+        } else {
+            try! realm.write {
+                user.watchList.removeAll()
+            }
+        }
+    }
     
     public func getCurrentUser() -> User? // Optional<User>
     {

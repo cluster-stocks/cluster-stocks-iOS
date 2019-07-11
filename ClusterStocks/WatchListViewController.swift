@@ -125,11 +125,9 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
             let stock = self.allStocks[indexPath.row]
             if let userPutRequestInput = CSUserPutRequestMethodModel() {
                 userPutRequestInput.ticker = [stock.ticker]
-                userPutRequestInput.userName = "a"//fetch username
+                userPutRequestInput.userName = RealmUtils.instance().getCurrentUser()?.userName
                 userPutRequestInput.operation = "-"
                 UpdateWatchlist(input: userPutRequestInput, stock:stock)
-                RealmUtils.instance().deleteStockSummary(stock: stock)
-                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
             }
         }
     }
@@ -137,14 +135,13 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     func UpdateWatchlist(input:CSUserPutRequestMethodModel, stock:StockSummary) {
         client.userPut(body: input).continueWith { (task: AWSTask<CSUserPutResponseMethodModel>?) -> AnyObject? in
             if let result = self.putUserResult(task: task) {
+                //After server request perform following actions
                 DispatchQueue.main.async {
-                    let user = User()
-                    user.userName = "a"
-                    if let watchedStocks = result.watchlist{
-                    user.watchList.append(objectsIn: watchedStocks)
+                    if let userName = input.userName {
+                        RealmUtils.instance().updateUserWatchlist(username: userName, watchedStocks: result.watchlist)
+                        RealmUtils.instance().deleteStockSummary(stock: stock)
+                        self.watchListTableView.reloadData()
                     }
-                    RealmUtils.instance().saveUser(user: user)
-                    RealmUtils.instance().deleteStockSummary(stock: stock)
                 }
                 return result
             }

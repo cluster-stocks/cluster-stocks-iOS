@@ -28,7 +28,7 @@ public class CSUserPutResponseMethodModel : AWSModel {
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["responseMessage"] = "ResponseMessage"
-		params["watchlist"] = "Watchlist"
+		params["watchlist"] = "WatchList"
 		params["notValidTickers"] = "NotValidTickers"
 		
         return params

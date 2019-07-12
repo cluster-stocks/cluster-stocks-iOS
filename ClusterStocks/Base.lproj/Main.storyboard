@@ -243,15 +243,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-fP-vVn" userLabel="SaveToWatchlist">
+                                <rect key="frame" x="101" y="399.5" width="173" height="41"/>
+                                <color key="backgroundColor" red="0.61601001229999997" green="0.88148170739999998" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Save to Watchlist" label="Save to Watchlist">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="cns-IP-Fqb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Save to Watchlist"/>
+                                <connections>
+                                    <action selector="saveToWatchlistClicked:" destination="GhS-MM-KwT" eventType="touchUpInside" id="fgJ-bj-Xcd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x8s-RG-2nh" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" constant="16" id="C2i-uN-3b4"/>
                             <constraint firstItem="bJo-tC-Erc" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" id="DSv-oK-OrK"/>
                             <constraint firstItem="um7-Aq-EB8" firstAttribute="trailing" secondItem="Dzl-yX-f3Y" secondAttribute="trailing" constant="16" id="EJy-YW-sbm"/>
+                            <constraint firstItem="uC5-fP-vVn" firstAttribute="top" secondItem="Dzl-yX-f3Y" secondAttribute="bottom" constant="59.5" id="JUd-Im-pop"/>
                             <constraint firstItem="x8s-RG-2nh" firstAttribute="top" secondItem="bJo-tC-Erc" secondAttribute="bottom" constant="100" id="Njg-oW-oGs"/>
                             <constraint firstItem="bJo-tC-Erc" firstAttribute="trailing" secondItem="um7-Aq-EB8" secondAttribute="trailing" id="PAv-gy-JeI"/>
                             <constraint firstItem="Dzl-yX-f3Y" firstAttribute="leading" secondItem="x8s-RG-2nh" secondAttribute="trailing" constant="10" id="Pum-4C-4DT"/>
+                            <constraint firstItem="uC5-fP-vVn" firstAttribute="centerX" secondItem="vWY-Ua-AFq" secondAttribute="centerX" id="RY6-BC-YFG"/>
+                            <constraint firstItem="uC5-fP-vVn" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" constant="101" id="cue-i6-I4a"/>
                             <constraint firstItem="Dzl-yX-f3Y" firstAttribute="top" secondItem="x8s-RG-2nh" secondAttribute="top" id="qwp-A1-r0Z"/>
                             <constraint firstItem="bJo-tC-Erc" firstAttribute="top" secondItem="um7-Aq-EB8" secondAttribute="top" id="sHI-kj-tVR"/>
                         </constraints>
@@ -261,6 +280,7 @@
                         <outlet property="companyNameValue" destination="NeO-8N-6Fp" id="xoO-5S-Uui"/>
                         <outlet property="currentPriceValue" destination="SQr-md-bqj" id="aYT-Jw-hPA"/>
                         <outlet property="fieldStackView" destination="x8s-RG-2nh" id="rko-WC-E7E"/>
+                        <outlet property="saveToWatchlist" destination="uC5-fP-vVn" id="g30-v3-gYJ"/>
                         <outlet property="searchBar" destination="bJo-tC-Erc" id="lWb-Z0-n9O"/>
                         <outlet property="tickerValue" destination="Opc-7A-XKu" id="815-i9-L5H"/>
                         <outlet property="valueStackView" destination="Dzl-yX-f3Y" id="cBy-Ct-YFp"/>
@@ -268,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3a-zY-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="48"/>
+            <point key="canvasLocation" x="2736.8000000000002" y="47.226386806596707"/>
         </scene>
         <!--Stock Summary-->
         <scene sceneID="YNc-1L-Zbv">

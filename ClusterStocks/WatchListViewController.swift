@@ -23,6 +23,10 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
         // Watch List View controller loads view and supplies table view with data
         self.watchListTableView.dataSource = self
         self.watchListTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         populateStockSummaryList()
     }
     

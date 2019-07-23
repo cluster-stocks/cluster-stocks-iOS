@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Izj-Ds-lGq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Cmj-Ao-FmM" userLabel="Value Stack View">
-                                <rect key="frame" x="144" y="273" width="200" height="75"/>
+                                <rect key="frame" x="159" y="166" width="200" height="165"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="John123@gmail.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1O-Sc-EWH" userLabel="Username Value">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="John123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1O-Sc-EWH" userLabel="Username Value">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="Username Value">
                                             <accessibilityTraits key="traits" none="YES"/>
@@ -36,13 +36,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="john@123@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4Q-2M-3b3" userLabel="Email Value">
+                                        <rect key="frame" x="0.0" y="90" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+17777324554" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-Jc-M7p" userLabel="Phone Number Value">
+                                        <rect key="frame" x="0.0" y="135" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Hjv-gd-IWj"/>
+                                    <constraint firstAttribute="width" constant="200" id="0sW-98-73a"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2Ea-d8-mO2" userLabel="Field Stack View">
-                                <rect key="frame" x="47" y="278" width="85" height="66"/>
+                                <rect key="frame" x="40" y="166" width="85" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0T-Bb-WUa" userLabel="Username">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="20.5"/>
@@ -57,13 +69,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvB-dq-Fju">
+                                        <rect key="frame" x="0.0" y="91" width="85" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Email" label="Email"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0I-ri-jvb">
+                                        <rect key="frame" x="0.0" y="136.5" width="85" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" label="Phone Number"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="wmh-gN-Q6e"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pva-c6-LRy">
-                                <rect key="frame" x="101" y="406" width="173" height="41"/>
+                                <rect key="frame" x="101" y="378" width="173" height="41"/>
                                 <color key="backgroundColor" red="0.61601001231368768" green="0.88148170739990794" blue="0.88235294818878174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Change current password" label="Change Password"/>
                                 <constraints>
@@ -76,22 +102,41 @@
                                     <segue destination="QJF-Il-ORo" kind="show" identifier="ShowChangePasswordSegue" id="Klk-34-zji"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGo-NX-WSd">
+                                <rect key="frame" x="101" y="453" width="173" height="41"/>
+                                <color key="backgroundColor" red="0.61601001229999997" green="0.88148170739999998" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Sign Out" label="Sign Out"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="gQR-bS-6p4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="SignOutPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wvx-gq-EOW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pva-c6-LRy" firstAttribute="top" secondItem="2Ea-d8-mO2" secondAttribute="bottom" constant="62" id="1aj-jr-8xh"/>
-                            <constraint firstItem="2Ea-d8-mO2" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="47" id="Q9m-ia-eDI"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Cmj-Ao-FmM" secondAttribute="trailing" constant="31" id="k6q-2A-G84"/>
-                            <constraint firstItem="2Ea-d8-mO2" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="214" id="lR0-or-2mX"/>
+                            <constraint firstItem="pva-c6-LRy" firstAttribute="top" secondItem="2Ea-d8-mO2" secondAttribute="bottom" constant="55" id="1aj-jr-8xh"/>
+                            <constraint firstItem="2Ea-d8-mO2" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="40" id="Q9m-ia-eDI"/>
+                            <constraint firstItem="Cmj-Ao-FmM" firstAttribute="leading" secondItem="2Ea-d8-mO2" secondAttribute="trailing" constant="34" id="UFU-8g-8L3"/>
+                            <constraint firstItem="KGo-NX-WSd" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="aP7-Lb-m4D"/>
+                            <constraint firstItem="Cmj-Ao-FmM" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="ak9-Xx-l8z"/>
+                            <constraint firstItem="Cmj-Ao-FmM" firstAttribute="top" secondItem="2Ea-d8-mO2" secondAttribute="top" id="iG8-Lr-pcU"/>
+                            <constraint firstItem="2Ea-d8-mO2" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="102" id="lR0-or-2mX"/>
                             <constraint firstItem="pva-c6-LRy" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="mi7-m4-j9z"/>
-                            <constraint firstItem="Cmj-Ao-FmM" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="209" id="yhN-ww-AF0"/>
+                            <constraint firstItem="KGo-NX-WSd" firstAttribute="top" secondItem="pva-c6-LRy" secondAttribute="bottom" constant="34" id="qdZ-sV-4X3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="Profile" id="d14-4S-jgJ"/>
                     <connections>
+                        <outlet property="email" destination="d4Q-2M-3b3" id="jGN-kv-GJb"/>
                         <outlet property="fullName" destination="jlh-yg-UZO" id="0YG-9v-VQK"/>
+                        <outlet property="phoneNumber" destination="nfw-Jc-M7p" id="Lyx-cw-XTR"/>
                         <outlet property="userName" destination="h1O-Sc-EWH" id="oRf-SQ-MUU"/>
                     </connections>
                 </viewController>
@@ -197,7 +242,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-yX-f3Y" userLabel="Value Stack View">
                                 <rect key="frame" x="159" y="220" width="200" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AMZN" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Opc-7A-XKu" userLabel="Ticker Value">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AMZN" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1p-kr-fXz" userLabel="Ticker Value">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -223,7 +268,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="x8s-RG-2nh" userLabel="Field Stack View">
                                 <rect key="frame" x="16" y="220" width="133" height="111.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-vu-9qc" userLabel="Ticker">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWx-z4-I4l" userLabel="Ticker">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -259,6 +304,18 @@
                                     <action selector="saveToWatchlistClicked:" destination="GhS-MM-KwT" eventType="touchUpInside" id="fgJ-bj-Xcd"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Ticker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we4-G2-7bQ" userLabel="Error Banner">
+                                <rect key="frame" x="9" y="148" width="336" height="19.5"/>
+                                <accessibility key="accessibilityConfiguration" label="Error Banner">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="userComments">
+                                    <fragment content="Error Banner"/>
+                                </attributedString>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -270,7 +327,10 @@
                             <constraint firstItem="bJo-tC-Erc" firstAttribute="trailing" secondItem="um7-Aq-EB8" secondAttribute="trailing" id="PAv-gy-JeI"/>
                             <constraint firstItem="Dzl-yX-f3Y" firstAttribute="leading" secondItem="x8s-RG-2nh" secondAttribute="trailing" constant="10" id="Pum-4C-4DT"/>
                             <constraint firstItem="uC5-fP-vVn" firstAttribute="centerX" secondItem="vWY-Ua-AFq" secondAttribute="centerX" id="RY6-BC-YFG"/>
+                            <constraint firstItem="we4-G2-7bQ" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" constant="9" id="cgF-DE-QHa"/>
                             <constraint firstItem="uC5-fP-vVn" firstAttribute="leading" secondItem="um7-Aq-EB8" secondAttribute="leading" constant="101" id="cue-i6-I4a"/>
+                            <constraint firstItem="um7-Aq-EB8" firstAttribute="trailing" secondItem="we4-G2-7bQ" secondAttribute="trailing" constant="30" id="faK-iK-wdd"/>
+                            <constraint firstItem="um7-Aq-EB8" firstAttribute="top" secondItem="we4-G2-7bQ" secondAttribute="top" constant="-84" id="kR9-cA-rOd"/>
                             <constraint firstItem="Dzl-yX-f3Y" firstAttribute="top" secondItem="x8s-RG-2nh" secondAttribute="top" id="qwp-A1-r0Z"/>
                             <constraint firstItem="bJo-tC-Erc" firstAttribute="top" secondItem="um7-Aq-EB8" secondAttribute="top" id="sHI-kj-tVR"/>
                         </constraints>
@@ -279,10 +339,11 @@
                     <connections>
                         <outlet property="companyNameValue" destination="NeO-8N-6Fp" id="xoO-5S-Uui"/>
                         <outlet property="currentPriceValue" destination="SQr-md-bqj" id="aYT-Jw-hPA"/>
+                        <outlet property="errorBanner" destination="we4-G2-7bQ" id="djh-TT-KHQ"/>
                         <outlet property="fieldStackView" destination="x8s-RG-2nh" id="rko-WC-E7E"/>
                         <outlet property="saveToWatchlist" destination="uC5-fP-vVn" id="g30-v3-gYJ"/>
                         <outlet property="searchBar" destination="bJo-tC-Erc" id="lWb-Z0-n9O"/>
-                        <outlet property="tickerValue" destination="Opc-7A-XKu" id="815-i9-L5H"/>
+                        <outlet property="tickerValue" destination="v1p-kr-fXz" id="4xw-SI-rjt"/>
                         <outlet property="valueStackView" destination="Dzl-yX-f3Y" id="cBy-Ct-YFp"/>
                     </connections>
                 </viewController>
@@ -436,6 +497,7 @@
                         <outlet property="companyNameValue" destination="G2Q-YB-8w3" id="noy-Qw-kqa"/>
                         <outlet property="currentPriceValue" destination="EVf-gc-4Ev" id="c4p-zn-yzl"/>
                         <outlet property="daysRangeValue" destination="kpc-gf-CaL" id="geu-rw-qGR"/>
+                        <outlet property="earningsDateField" destination="P0f-jJ-ZUs" id="Ate-W2-wIX"/>
                         <outlet property="earningsDateValue" destination="QbA-S0-wrN" id="FMV-ZK-SX3"/>
                         <outlet property="lastUpdatedValue" destination="fvc-Cq-9Cc" id="nki-NX-7Hj"/>
                         <outlet property="openValue" destination="uf0-B8-Oop" id="wZ9-IS-ja8"/>
@@ -499,40 +561,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJo-Ez-Myv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="793" y="-322"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="frp-TI-w4h">
-            <objects>
-                <viewController id="Izj-Ds-lGq" userLabel="Login" customClass="LoginViewController" customModule="ClusterStocks" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7xR-Gj-uyU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-2M-2nf">
-                                <rect key="frame" x="167.5" y="327.5" width="40" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="Izj-Ds-lGq" eventType="touchUpInside" id="m4A-UC-iTG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="VOp-2M-2nf" firstAttribute="centerX" secondItem="bEi-2e-3Ix" secondAttribute="centerX" id="4fX-Hm-bsU"/>
-                            <constraint firstItem="VOp-2M-2nf" firstAttribute="centerY" secondItem="bEi-2e-3Ix" secondAttribute="centerY" id="Rvb-3n-m5V"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bEi-2e-3Ix"/>
-                    </view>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="showAppTab" id="3Aa-TZ-t6H"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qgE-NC-1SG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-900" y="0.44977511244377816"/>
         </scene>
         <!--Change Password-->
         <scene sceneID="34G-cX-ZA0">

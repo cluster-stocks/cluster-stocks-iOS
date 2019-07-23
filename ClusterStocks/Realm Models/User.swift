@@ -11,6 +11,8 @@ class User : Object {
     
     @objc dynamic var userName = UUID().uuidString
     @objc dynamic var fullName = ""
+    @objc dynamic var email = ""
+    @objc dynamic var phoneNumber = ""
     var watchList = List<String>()
     
     override static func primaryKey() -> String {

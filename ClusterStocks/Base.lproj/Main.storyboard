@@ -102,11 +102,12 @@
                                     <segue destination="QJF-Il-ORo" kind="show" identifier="ShowChangePasswordSegue" id="Klk-34-zji"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGo-NX-WSd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGo-NX-WSd">
                                 <rect key="frame" x="101" y="453" width="173" height="41"/>
                                 <color key="backgroundColor" red="0.61601001229999997" green="0.88148170739999998" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Sign Out" label="Sign Out"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="arK-Cw-SM4"/>
                                     <constraint firstAttribute="height" constant="41" id="gQR-bS-6p4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>

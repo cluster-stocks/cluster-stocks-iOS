@@ -25,7 +25,6 @@
 		7733E35622DBF0D4000AC602 /* RealmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733E35522DBF0D4000AC602 /* RealmUtils.swift */; };
 		7742E6F322E4FD05001222B2 /* CSUserGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E622E4FD03001222B2 /* CSUserGetResponseMethodModel.swift */; };
 		7742E6F422E4FD05001222B2 /* CSStockGetResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */; };
-		7742E6F522E4FD05001222B2 /* CSClusterStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E822E4FD03001222B2 /* CSClusterStockAPIClient.swift */; };
 		7742E6F622E4FD05001222B2 /* CSUserPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E922E4FD03001222B2 /* CSUserPostResponseMethodModel.swift */; };
 		7742E6F722E4FD05001222B2 /* CSUserPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6EA22E4FD04001222B2 /* CSUserPostRequestMethodModel.swift */; };
 		7742E6F822E4FD05001222B2 /* CSStockPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6EB22E4FD04001222B2 /* CSStockPostRequestMethodModel.swift */; };
@@ -91,7 +90,6 @@
 		7733E35522DBF0D4000AC602 /* RealmUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUtils.swift; sourceTree = "<group>"; };
 		7742E6E622E4FD03001222B2 /* CSUserGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSUserGetResponseMethodModel.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src/CSUserGetResponseMethodModel.swift"; sourceTree = "<group>"; };
 		7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockGetResponseMethodModel422.swift; sourceTree = "<group>"; };
-		7742E6E822E4FD03001222B2 /* CSClusterStockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSClusterStockAPIClient.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src/CSClusterStockAPIClient.swift"; sourceTree = "<group>"; };
 		7742E6E922E4FD03001222B2 /* CSUserPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostResponseMethodModel.swift; sourceTree = "<group>"; };
 		7742E6EA22E4FD04001222B2 /* CSUserPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostRequestMethodModel.swift; sourceTree = "<group>"; };
 		7742E6EB22E4FD04001222B2 /* CSStockPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockPostRequestMethodModel.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		77B0FCF022C9D8B900963B69 /* AWS */ = {
 			isa = PBXGroup;
 			children = (
-				7742E6E822E4FD03001222B2 /* CSClusterStockAPIClient.swift */,
 				7742E6F022E4FD04001222B2 /* CSStockGetResponseMethodModel.swift */,
 				7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */,
 				7742E6EB22E4FD04001222B2 /* CSStockPostRequestMethodModel.swift */,
@@ -526,7 +523,6 @@
 				7742E6F622E4FD05001222B2 /* CSUserPostResponseMethodModel.swift in Sources */,
 				7733E33822DBE33B000AC602 /* StockCell.swift in Sources */,
 				7733E33A22DBE33B000AC602 /* ChangePasswordViewController.swift in Sources */,
-				7742E6F522E4FD05001222B2 /* CSClusterStockAPIClient.swift in Sources */,
 				7742E6F422E4FD05001222B2 /* CSStockGetResponseMethodModel422.swift in Sources */,
 				7742E6FE22E4FD05001222B2 /* CSStockPostResponseMethodModel.swift in Sources */,
 				7742E6FA22E4FD05001222B2 /* CSUserPutResponseMethodModel422.swift in Sources */,

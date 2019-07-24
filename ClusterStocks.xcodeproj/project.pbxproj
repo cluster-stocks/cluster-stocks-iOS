@@ -23,7 +23,6 @@
 		7733E35122DBE35F000AC602 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733E34722DBE35F000AC602 /* Constants.swift */; };
 		7733E35222DBE35F000AC602 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733E34822DBE35F000AC602 /* ForgotPasswordViewController.swift */; };
 		7733E35622DBF0D4000AC602 /* RealmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733E35522DBF0D4000AC602 /* RealmUtils.swift */; };
-		7742E6F322E4FD05001222B2 /* CSUserGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E622E4FD03001222B2 /* CSUserGetResponseMethodModel.swift */; };
 		7742E6F422E4FD05001222B2 /* CSStockGetResponseMethodModel422.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */; };
 		7742E6F622E4FD05001222B2 /* CSUserPostResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6E922E4FD03001222B2 /* CSUserPostResponseMethodModel.swift */; };
 		7742E6F722E4FD05001222B2 /* CSUserPostRequestMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742E6EA22E4FD04001222B2 /* CSUserPostRequestMethodModel.swift */; };
@@ -42,6 +41,8 @@
 		77BF6466229CA4C8007C8D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF6464229CA4C8007C8D8B /* LaunchScreen.storyboard */; };
 		77BF6471229CA4C8007C8D8B /* ClusterStocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF6470229CA4C8007C8D8B /* ClusterStocksTests.swift */; };
 		77BF647C229CA4C8007C8D8B /* ClusterStocksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF647B229CA4C8007C8D8B /* ClusterStocksUITests.swift */; };
+		77C6940D22E9120A000255DF /* CSClusterStockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6940B22E9120A000255DF /* CSClusterStockAPIClient.swift */; };
+		77C6940E22E9120A000255DF /* CSUserGetResponseMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C6940C22E9120A000255DF /* CSUserGetResponseMethodModel.swift */; };
 		77F0259822CF00AB00F234C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0259722CF00AB00F234C3 /* User.swift */; };
 		ADABA83243972EEE734B221C /* Pods_ClusterStocksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59EC84740B9895C2FA456FA /* Pods_ClusterStocksUITests.framework */; };
 		EC11C4DFC43035C020058A87 /* Pods_ClusterStocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9CB3A83036D442D12D2FDD /* Pods_ClusterStocks.framework */; };
@@ -88,7 +89,6 @@
 		7733E34722DBE35F000AC602 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7733E34822DBE35F000AC602 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7733E35522DBF0D4000AC602 /* RealmUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUtils.swift; sourceTree = "<group>"; };
-		7742E6E622E4FD03001222B2 /* CSUserGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSUserGetResponseMethodModel.swift; path = "../../../aws-apigateway-ios-swift _ CS/generated-src/CSUserGetResponseMethodModel.swift"; sourceTree = "<group>"; };
 		7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSStockGetResponseMethodModel422.swift; sourceTree = "<group>"; };
 		7742E6E922E4FD03001222B2 /* CSUserPostResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostResponseMethodModel.swift; sourceTree = "<group>"; };
 		7742E6EA22E4FD04001222B2 /* CSUserPostRequestMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserPostRequestMethodModel.swift; sourceTree = "<group>"; };
@@ -113,6 +113,8 @@
 		77BF6477229CA4C8007C8D8B /* ClusterStocksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClusterStocksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BF647B229CA4C8007C8D8B /* ClusterStocksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterStocksUITests.swift; sourceTree = "<group>"; };
 		77BF647D229CA4C8007C8D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77C6940B22E9120A000255DF /* CSClusterStockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSClusterStockAPIClient.swift; sourceTree = "<group>"; };
+		77C6940C22E9120A000255DF /* CSUserGetResponseMethodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserGetResponseMethodModel.swift; sourceTree = "<group>"; };
 		77F0259722CF00AB00F234C3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3E6BA12FD001313A8DD3EDE /* Pods-ClusterStocksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClusterStocksUITests.release.xcconfig"; path = "Target Support Files/Pods-ClusterStocksUITests/Pods-ClusterStocksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE3A5010631E6745EAAE3E9B /* Pods-ClusterStocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClusterStocksTests.release.xcconfig"; path = "Target Support Files/Pods-ClusterStocksTests/Pods-ClusterStocksTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,11 +187,12 @@
 		77B0FCF022C9D8B900963B69 /* AWS */ = {
 			isa = PBXGroup;
 			children = (
+				77C6940B22E9120A000255DF /* CSClusterStockAPIClient.swift */,
+				77C6940C22E9120A000255DF /* CSUserGetResponseMethodModel.swift */,
 				7742E6F022E4FD04001222B2 /* CSStockGetResponseMethodModel.swift */,
 				7742E6E722E4FD03001222B2 /* CSStockGetResponseMethodModel422.swift */,
 				7742E6EB22E4FD04001222B2 /* CSStockPostRequestMethodModel.swift */,
 				7742E6F122E4FD04001222B2 /* CSStockPostResponseMethodModel.swift */,
-				7742E6E622E4FD03001222B2 /* CSUserGetResponseMethodModel.swift */,
 				7742E6F222E4FD04001222B2 /* CSUserGetResponseMethodModel422.swift */,
 				7742E6EA22E4FD04001222B2 /* CSUserPostRequestMethodModel.swift */,
 				7742E6E922E4FD03001222B2 /* CSUserPostResponseMethodModel.swift */,
@@ -518,6 +521,7 @@
 			files = (
 				7733E35222DBE35F000AC602 /* ForgotPasswordViewController.swift in Sources */,
 				7742E6FB22E4FD05001222B2 /* CSUserPutRequestMethodModel.swift in Sources */,
+				77C6940D22E9120A000255DF /* CSClusterStockAPIClient.swift in Sources */,
 				7733E33C22DBE33B000AC602 /* LoginViewController.swift in Sources */,
 				7733E34B22DBE35F000AC602 /* ConfirmSignUpViewController.swift in Sources */,
 				7742E6F622E4FD05001222B2 /* CSUserPostResponseMethodModel.swift in Sources */,
@@ -530,10 +534,10 @@
 				7733E35122DBE35F000AC602 /* Constants.swift in Sources */,
 				7733E34A22DBE35F000AC602 /* SignInViewController.swift in Sources */,
 				7742E6FD22E4FD05001222B2 /* CSStockGetResponseMethodModel.swift in Sources */,
+				77C6940E22E9120A000255DF /* CSUserGetResponseMethodModel.swift in Sources */,
 				7733E33922DBE33B000AC602 /* ProfileViewController.swift in Sources */,
 				7742E6FF22E4FD05001222B2 /* CSUserGetResponseMethodModel422.swift in Sources */,
 				7733E33E22DBE33B000AC602 /* StockSummaryViewController.swift in Sources */,
-				7742E6F322E4FD05001222B2 /* CSUserGetResponseMethodModel.swift in Sources */,
 				7785C8B7229E079F00D21E67 /* StockSummary.swift in Sources */,
 				7733E33B22DBE33B000AC602 /* SearchViewController.swift in Sources */,
 				7742E6F722E4FD05001222B2 /* CSUserPostRequestMethodModel.swift in Sources */,

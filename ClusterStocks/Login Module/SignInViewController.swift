@@ -25,7 +25,7 @@ class SignInViewController: UIViewController {
     
     //After Login in
     func getUserDetails() {
-        if let usernametext = self.usernameText {
+        if let usernametext = self.username.text {
             client.userGet(userName: usernametext).continueWith { (task: AWSTask<CSUserGetResponseMethodModel>?) -> AnyObject? in
                 if let result = self.getUserGetResult(task: task) {
                     //After doing AWSTask in background dispatch queue, using main dispatch queue for accessing Realm DB.
